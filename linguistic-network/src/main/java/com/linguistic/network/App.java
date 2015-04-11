@@ -1,21 +1,12 @@
 package com.linguistic.network;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.ListIterator;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
-import com.linguistic.network.entity.Edges;
-import com.linguistic.network.entity.Nodes;
-
 public class App {
-	private static String CLEAR_SENTENCE = "[^a-zA-ZİıŞşÜüĞğÖöÇç.!,'?^%()0-9\\s]";
 	public static void main(String[] args) {
 		
 		Configuration configuration = new Configuration();
