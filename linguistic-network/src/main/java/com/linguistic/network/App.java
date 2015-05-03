@@ -12,7 +12,7 @@ public class App {
 		Configuration configuration = new Configuration();
 		configuration.configure();
 		
-		ServiceRegistry serviceRegistry = serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
+		ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
 		SessionFactory sessionFactory = configuration.buildSessionFactory(serviceRegistry);
 		
 		Session session = sessionFactory.openSession();
@@ -20,10 +20,12 @@ public class App {
 		JedisFactory jf = new JedisFactory();
 		
 		Graphlogic graphlogic = new Graphlogic();
-		graphlogic.createSequentialLinks(jf,session,Constants.HABERTURK);
-		graphlogic.createSequentialLinks(jf,session,Constants.TRTHABER);
-		graphlogic.createSequentialLinks(jf,session,Constants.HURRIYET);
-		graphlogic.createSequentialLinks(jf,session,Constants.ACUNNCOM);
+//		graphlogic.createSequentialLinks(jf,session,Constants.HABERTURK);
+//		graphlogic.createSequentialLinks(jf,session,Constants.TRTHABER);
+//		graphlogic.createSequentialLinks(jf,session,Constants.HURRIYET);
+//		graphlogic.createSequentialLinks(jf,session,Constants.ACUNNCOM);
+		
+		graphlogic.createMeshLinks(jf, session, Constants.HABERTURK);
 		
 		System.out.println("NETWORKS CREATED");
 		session.getTransaction().commit();

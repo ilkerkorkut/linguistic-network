@@ -6,7 +6,6 @@
 <hibernate-configuration>
 	<session-factory>
 
-		<!-- Connection settings -->
 		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
 		<property name="hibernate.connection.url">jdbc:postgresql://localhost/linguistic</property>
 		<property name="hibernate.connection.username">postgres</property>
@@ -16,7 +15,6 @@
 
 		<property name="show_sql">true</property>
 		
-		<!-- Annotated entity classes -->
 		<mapping class="com.linguistic.network.entity.Nodes" />
 		<mapping class="com.linguistic.network.entity.Edges" />
 

@@ -22,8 +22,8 @@ public class App {
 //		DatacollectorComments.save("trthaber", trthaberPosts, facebookClient);
 //		System.out.println("HABERTURK");
 //		DatacollectorComments.save("Haberturk", haberturkPosts, facebookClient);
-		System.out.println("HURRIYET");
-		DatacollectorComments.save("hurriyet", hurriyetPosts, facebookClient);
+//		System.out.println("HURRIYET");
+//		DatacollectorComments.save("hurriyet", hurriyetPosts, facebookClient);
 		System.out.println("ACUNNCOM");
 		DatacollectorComments.save("acunncom", acunncomPosts, facebookClient);
 		
