@@ -39,4 +39,8 @@ public class JedisFactory {
 		return null;
 	}
 	
+	public void close(){
+		pool.close();
+	}
+	
 }

@@ -6,4 +6,7 @@ public class Constants {
 	public static final String TRTHABER = "trthaber";
 	public static final String ACUNNCOM = "acunncom";
 	public static final String HURRIYET = "hurriyet";
+	
+	public static String LINK_SEQUENTIAL = "SEQUENTIAL";
+	public static String LINK_MESH = "MESH";
 }

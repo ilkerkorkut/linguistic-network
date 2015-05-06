@@ -19,16 +19,13 @@ public class App {
 		session.beginTransaction();
 		JedisFactory jf = new JedisFactory();
 		
-		Graphlogic graphlogic = new Graphlogic();
-//		graphlogic.createSequentialLinks(jf,session,Constants.HABERTURK);
-//		graphlogic.createSequentialLinks(jf,session,Constants.TRTHABER);
-//		graphlogic.createSequentialLinks(jf,session,Constants.HURRIYET);
-//		graphlogic.createSequentialLinks(jf,session,Constants.ACUNNCOM);
-		
-		graphlogic.createMeshLinks(jf, session, Constants.HABERTURK);
+		Graphlogic graphLogic = new Graphlogic(jf, session, Constants.HABERTURK);
+		graphLogic.createGraphByLinkType(Constants.LINK_SEQUENTIAL, 600);
+		graphLogic.createGraphByLinkType(Constants.LINK_MESH, 600);
 		
 		System.out.println("NETWORKS CREATED");
 		session.getTransaction().commit();
 		session.close();
+		jf.close();
 	}
 }
